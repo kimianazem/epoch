@@ -1,59 +1,72 @@
 <html>
-  <head>
-    <style>
-      html {
-        font-family: "Gill Sans";
-        color: grey;
-        font-size: 36px;
-      }
-      div.my-content {
-        background-color: lightblue;
-        padding: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
 
-        transform: translate(-50%, -50%) ;
-      }
-      span.open {
-        color: green;
-      }
-      span.close {
-        color: yellow;
-      }
-    </style>
+<head>
+  <style>
+    html {
+      font-family: "Gill Sans";
+      color: rgb(78, 73, 73);
+      font-size: 36px;
+      background-color: rgb(170, 170, 99);
+    }
 
-    <title>First Web Page</title>
-  </head>
-   
-  <body>
-    <div class="my-content">
-      face
+    div.my-content {
+      background-color: rgb(7, 106, 138);
+      padding: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
 
-      <strong>
-        <span class="open"> on </span>
+      transform: translate(-50%, -50%);
+    }
 
-        /
+    span.open {
+      color: green;
+    }
 
-        <span class="close"> off </span>
-      </strong>
-    </div>
-    <script>
-      
-        const div = document.querySelector(".my-content");
-        
-        div.addEventListener("click", (event) => {
-            const on = document.querySelector(".open");
-            const off = document.querySelector(".close");
-            on.setAttribute("class", "close")
-            off.setAttribute("class", "open")         
+    span.close {
+      color: yellow;
+    }
+  </style>
 
-        });
-      </script>
-  </body>
+  <title>Ridiculous webpage</title>
+</head>
+ 
+
+<body>
+  <h1 style="font-size:45px;color:bisque;text-align: center;"> on and off switch </h1>
+  <p> you should click on it </p>
+  <p style="text-align:center" > should <q>click </q>on it </p>
+  <p style="text-align:right"> click on it </p>
+  
+  
+  <div class="my-content">
+    face
+
+    <strong>
+      <span class="open"> on </span>
+
+      /
+
+      <span class="close"> off </span>
+    </strong>
+  </div>
+  <script>
+
+    const div = document.querySelector(".my-content");
+
+    div.addEventListener("click", (event) => {
+      const on = document.querySelector(".open");
+      const off = document.querySelector(".close");
+      on.setAttribute("class", "close")
+      off.setAttribute("class", "open")
+
+    });
+  </script>
+</body>
+
 </html>
