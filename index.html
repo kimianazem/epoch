@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <style>
+      html {
+        font-family: "Gill Sans";
+        color: grey;
+        font-size: 36px;
+      }
+      div.my-content {
+        background-color: lightblue;
+        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%) ;
+      }
+      span.open {
+        color: green;
+      }
+      span.close {
+        color: red;
+      }
+    </style>
+
+    <title>First Web Page</title>
+  </head>
+   
+  <body>
+    <div class="my-content">
+      face
+
+      <strong>
+        <span class="open"> on </span>
+
+        /
+
+        <span class="close"> off </span>
+      </strong>
+    </div>
+    <script>
+      
+        const div = document.querySelector(".my-content");
+        
+        div.addEventListener("click", (event) => {
+            const on = document.querySelector(".open");
+            const off = document.querySelector(".close");
+            on.setAttribute("class", "close")
+            off.setAttribute("class", "open")         
+
+        });
+      </script>
+  </body>
+</html>
