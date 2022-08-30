@@ -9,28 +9,45 @@
       background-color: rgb(170, 170, 99);
     }
 
+    h1 {
+      font-size: 45px;
+      color: bisque;
+      text-align: center;
+    }
+
     div.my-content {
       background-color: rgb(7, 106, 138);
-      padding: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 40px;
-      padding-right: 40px;
-      border-radius: 10px;
+      font-weight: bold;
+      border-radius:   10px;
       position: absolute;
       top: 50%;
       left: 50%;
-
-      transform: translate(-50%, -50%);
+      padding: 20px 40px;
+      
+      transform: translate(-50%, -50%) rotate(5deg);
+      transition: all 100ms ease;
     }
+
+    div.my-content:hover {
+      transform: translate(-50%, -50%) scale(1.1) rotate(10deg);
+      transform-origin: 50% 50%;
+    }
+
+    .state {
+     
+      font-style: italic;
+    }
+
+
 
     span.open {
       color: green;
+   
     }
 
     span.close {
-      color: yellow;
-    }
+      color: red;
+    } 
   </style>
 
   <title>Ridiculous webpage</title>
@@ -38,22 +55,26 @@
  
 
 <body>
-  <h1 style="font-size:45px;color:bisque;text-align: center;"> on and off switch </h1>
+  <h1> on and off switch </h1>
   <p> you should click on it </p>
-  <p style="text-align:center" > should <q>click </q>on it </p>
+  <p> should <q>click </q>on it </p>
   <p style="text-align:right"> click on it </p>
-  
-  
+
+
   <div class="my-content">
+
     face
 
-    <strong>
-      <span class="open"> on </span>
 
-      /
+    <span class="open state divar"> on </span>
 
-      <span class="close"> off </span>
-    </strong>
+    /
+
+    <span id="unknown" class="close state"> off </span>
+    /
+    <strong class="state"> superposition</strong>
+
+
   </div>
   <script>
 
